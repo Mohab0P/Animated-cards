@@ -1,0 +1,92 @@
+*,*::before,*::after{
+    font-family: 'Almarai', sans-serif;
+    font-family: 'El Messiri', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+}
+h1{
+    text-align: center;
+    color: rgb(174, 229, 243);
+    padding: 2rem;
+    background-color: rgb(13, 146, 118);
+margin: 0 0 30px 0px;
+border-radius: 1rem;
+box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.541);
+}
+
+.grids{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px ,1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+.cards{
+    --padding: 1rem;
+background: white;
+padding: 1rem;
+border: 1px solid hsl(182, 26%, 48%);
+border-radius: .25rem;
+overflow: hidden;
+}
+
+.cards.card-shadow{
+border:none;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.541);
+}
+
+.card-hedaer{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding: var(--padding);
+    padding-bottom: 0;
+}
+.card-hedaer.image{
+    padding:0;
+   overflow: hidden; 
+}
+.card-hedaer.image >img{
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+.cards:hover > .card-hedaer.image > img{
+transform: scale(1.25);
+}
+.card-footer{
+   margin-top: .9rem; 
+   padding: 0 var(--padding);
+
+}
+.card-body{
+font-size: 1.1rem;
+padding: 0 var(--padding);
+}
+
+.btns{
+    --color:hsl(200, 50%, 50%);
+    background:var(--color);
+    color: white;
+    border: none;
+    padding: .5em .75em;
+    border-radius:.25em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btns:hover,.btns:focus{
+    background:hsl(200, 50%, 60%)
+}
+
+.btns.outline{
+    background: none;
+    border: 1px solid var(--color) ;
+    color: var(--color);
+}
+.btns.outline:hover,.btns.outline:focus{
+    background: hsl(200, 50%, 90%);
+}
